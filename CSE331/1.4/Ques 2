@@ -1,0 +1,152 @@
+
+Problem
+Nathan is preparing for the Dash marathon. He has NN training plans. The ii-th plan has an effectiveness of A_iA 
+i
+​
+ , but requires that at least B_iB 
+i
+​
+  other training plans must be performed before it. A training plan cannot be repeated.
+
+If he performs some K \gt 0K>0 distinct trainings - P_1, P_2, \ldots , P_KP 
+1
+​
+ ,P 
+2
+​
+ ,…,P 
+K
+​
+  (1 \le P_i \le N, P_i \neq P_j)(1≤P 
+i
+​
+ ≤N,P 
+i
+​
+ =P 
+j
+​
+ ) then his training score is \frac{\sum_{j=1}^{K} A_{P_j}}{K} 
+K
+∑ 
+j=1
+K
+​
+ A 
+P 
+j
+​
+ 
+​
+ 
+​
+ . If Nathan does not perform any training plan (K = 0)(K=0), then his score is 00.
+
+What is the highest score that Nathan can get by performing zero or more training plans, if he can perform them in any order?
+
+Input Format
+The first line of the input contains a single integer TT - the number of test cases. The description of TT test cases follows.
+The first line of each test case contains NN - the number of training plans.
+The second line contains NN integers A_1, A_2, \ldots, A_NA 
+1
+​
+ ,A 
+2
+​
+ ,…,A 
+N
+​
+  where A_iA 
+i
+​
+  is the effectiveness of the ii-th training plan.
+The third line contains NN integers B_1, B_2, \ldots, B_NB 
+1
+​
+ ,B 
+2
+​
+ ,…,B 
+N
+​
+  where B_iB 
+i
+​
+  is the number of pre-requisite training plans for the ii-th training plan.
+Output Format
+For each test case, output a single real number - the highest score that Nathan can get by performing zero or more training plans.
+Your answer is considered correct if its absolute or relative error does not exceed 10^{-6}10 
+−6
+ . Formally, let your answer be XX, and the jury's answer be YY. Your answer is accepted if and only if \frac{|X - Y|}{\max{(1, |Y|)}} \le 10^{-6} 
+max(1,∣Y∣)
+∣X−Y∣
+​
+ ≤10 
+−6
+ .
+Constraints
+1 \leq T \leq 10001≤T≤1000
+1 \leq N \leq 10^51≤N≤10 
+5
+ 
+-10^5 \leq A_i \leq 10^5−10 
+5
+ ≤A 
+i
+​
+ ≤10 
+5
+ 
+0 \leq B_i \leq N - 10≤B 
+i
+​
+ ≤N−1
+Sum of NN over all test cases does not exceed 5\cdot 10^55⋅10 
+5
+ .
+Sample 1:
+Input
+Output
+3
+4
+-9 -21 -4 -43
+0 0 0 0
+5
+10 14 5 9 1
+4 1 3 0 0
+7
+-1 101 5 63 -7 -88 59
+0 1 6 2 3 4 5
+0.000000
+11.500000
+54.333333
+Explanation:
+Test case 1: It is optimal for Nathan to not perform any training plans as all the plans have negative A_iA 
+i
+​
+  value.
+
+Test case 2: It is optimal for Nathan to:
+
+First, perform the 44-th training plan (for which B_i = 0B 
+i
+​
+ =0).
+Then perform the 22-nd training plan (for which B_i = 1B 
+i
+​
+ =1 which is satisfied as he has already performed 11 training plan)
+Test case 3: It is optimal for Nathan to:
+
+First, perform the 11-st training plan (for which B_i = 0B 
+i
+​
+ =0).
+Then perform the 22-nd training plan (for which B_i = 1B 
+i
+​
+ =1 which is satisfied as he has already performed 11 training plan)
+Then perform the 44-th training plan (for which B_i = 2B 
+i
+​
+ =2 which is satisfied as he has already performed 22 training plans)
