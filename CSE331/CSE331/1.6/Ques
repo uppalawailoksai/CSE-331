@@ -1,0 +1,42 @@
+Problem
+You are given an array of  numbers . In one operation, you can pick any index  and change  to . Given an integer , find the minimum number of operations required to make  the mode of the array.
+
+Note: A number is called the mode of the array if it is more frequent than any other number in the array.
+
+Example: The mode of array  is . The array  does not have any mode.
+
+Input format
+
+The first line contains the number of test cases .
+The first line of each test case contains two integers,  and  where N denotes the number of elements in the array.
+The second line contains  integers  denoting the contents of the array.
+Note: Sum of  over all test cases does not exceed .
+
+Output format
+
+For each test case output a line containing the minimum number of operations required to make  the mode of array .
+
+ Constraints
+
+
+
+
+
+Sum of  over all test cases is less than or equal to 
+
+Sample Input
+2
+3 1
+1 1 3
+4 1
+1 1 3 3
+Sample Output
+0
+1
+Time Limit: 1
+Memory Limit: 256
+Source Limit:
+Explanation
+For the first case, we can see that  is already the mode of the array.
+
+For the second case, we can choose index  and do the operation . The array will be . Now,  is the mode of the array.

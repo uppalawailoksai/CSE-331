@@ -1,0 +1,78 @@
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Pied Piper is a startup company trying to build a new Internet called Pipernet. Currently, they have AA users and they gain XX users everyday. There is also another company called Hooli, which has currently BB users and gains YY users everyday.
+
+Whichever company reaches ZZ users first takes over Pipernet. In case both companies reach ZZ users on the same day, Hooli takes over.
+
+Hooli is a very evil company (like E-Corp in Mr. Robot or Innovative Online Industries in Ready Player One). Therefore, many people are trying to help Pied Piper gain some users.
+
+Pied Piper has NN supporters with contribution values C_1, C_2, \ldots, C_NC 
+1
+​
+ ,C 
+2
+​
+ ,…,C 
+N
+​
+ . For each valid ii, when the ii-th supporter contributes, Pied Piper gains C_iC 
+i
+​
+  users instantly. After contributing, the contribution value of the supporter is halved, i.e. C_iC 
+i
+​
+  changes to \left\lfloor C_i / 2 \right\rfloor⌊C 
+i
+​
+ /2⌋. Each supporter may contribute any number of times, including zero. Supporters may contribute at any time until one of the companies takes over Pipernet, even during the current day.
+
+Find the minimum number of times supporters must contribute (the minimum total number of contributions) so that Pied Piper gains control of Pipernet.
+
+Input
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains six space-separated integers NN, AA, BB, XX, YY and ZZ.
+The second line contains NN space-separated integers C_1, C_2, \ldots, C_NC 
+1
+​
+ ,C 
+2
+​
+ ,…,C 
+N
+​
+  — the initial contribution values.
+Output
+For each test case, if Hooli will always gain control of Pipernet, print a single line containing the string "RIP" (without quotes). Otherwise, print a single line containing one integer — the minimum number of times supporters must contribute.
+
+Constraints
+1 \le T \le 101≤T≤10
+1 \le N \le 10^51≤N≤10 
+5
+ 
+1 \le A, B, X, Y, Z \le 10^91≤A,B,X,Y,Z≤10 
+9
+ 
+A, B \lt ZA,B<Z
+0 \le C_i \le 10^90≤C 
+i
+​
+ ≤10 
+9
+  for each valid ii
+Sample 1:
+Input
+Output
+3
+3 10 15 5 10 100
+12 15 18
+3 10 15 5 10 100
+5 5 10
+4 40 80 30 30 100
+100 100 100 100
+4
+RIP
+1
+Explanation:
+Example case 1: After 88 days, Pied Piper will have 5050 users and Hooli will have 9595 users. Then, if each supporter contributes once, Pied Piper will also have 9595 users. After that, they still need 55 more users, so supporter 33 can contribute again, with 18/2 = 918/2=9 more users. So the answer will be 44.
+
+Example case 2: There is no way to beat Hooli.

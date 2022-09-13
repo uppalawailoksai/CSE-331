@@ -1,0 +1,17 @@
+Given an array arr[] of size N, the task is to find the number of operations to convert array elements to zero by decrementing the value of array elements in pairs by any positive value. If the array elements can’t be converted to 0, return -1.
+
+Input: arr[] = {3, 2}
+Output: -1
+Explanation: All the array elements can’t be converted to 0
+Input: arr[] = {5, 4, 3}
+Output: 12
+Explanation: Subtract 1 from pair (4, 3) we get {5, 3, 2}, subtract 3 from (5, 3) we get {2, 0, 2}, Subtract 2 from pair (2, 2) we get {0, 0, 0}
+
+ 
+Approach: The task can be solved by storing all elements of an array in a priority queue, Then we need to choose pair of the two greatest elements from the queue and subtract 1 from them until only one or no positive element is left.
+Follow the below steps to solve the problem:
+
+Store elements in the priority queue
+Take a while loop until the size of the priority queue is greater than or equal to 2, and in each iteration:-
+Pop the first two elements and store them in variables ele1 and ele2 
+Decrement ele1 and ele2 with 1, If any of them are still greater than zero push them again in the queue.

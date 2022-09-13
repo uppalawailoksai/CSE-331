@@ -1,0 +1,57 @@
+Problem
+There are  chairs arranged in a row.  people come in a line and start occupying the chairs. Each person wants to be as far as possible from every other person. So, every person arriving looks for the largest empty continuous sequence of unoccupied chairs and occupies the middle position. They have a preference indicating whether they would choose the left or the right chair if there are two chairs at the middle to chose from (else the preference does not matter, since there is only 1 chair at the center). If there are multiple largest empty sequences, then the person chooses the sequence which appears first from left side. You are asked to answer  queries. Determine which person has occupied the queried position.
+
+Input Format
+The first line of every test file are  integers  and .
+
+The next line contains a string  of length . The  character would be '' or '' indicating the preference of the  person - the left or the right seat respectively. 
+
+Next line contains an integer  - the number of queries.
+
+Next  lines contain an integer  - the queried position.
+
+Output Format
+For each query, output the persons' entry number if it is occupied, else print '' without quotes in a new line.
+
+Constraints
+
+
+
+
+
+
+Sample Inputs
+
+Input	Output
+3 3
+RRL
+3
+1
+3
+2	2
+3
+1
+ 
+
+Sample Input
+5 3
+RLR
+5
+1
+2
+3
+4
+5
+Sample Output
+2
+-1
+1
+-1
+3
+Time Limit: 1
+Memory Limit: 256
+Source Limit:
+Explanation
+The first person would sit at the center since there are odd number of seats. The second person would occupy the first position since {1, 2} is the largest uncoccupied sequence which appears first and his preference is the left seat. The third would occupy the last seat because his prefernce is the right seat.
+
+Hence  position is occupied by  person,  position by  person and  position by  person.
